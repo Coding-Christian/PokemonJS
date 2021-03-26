@@ -63,13 +63,12 @@ class Pokemon {
   getInfo() {
     return this.info;
   }
-}
 
-function whosThatPokemon(pokemon) {
-  const pokeInfo = pokemon.getInfo();
-  let string =
-    pokeInfo.basicInfo.nickname ||
-    pokeInfo.basicInfo.name ||
-    `Pokemon ${pokeInfo.basicInfo.id || 0}`;
-  return `It's ${string}!`;
+  whosThatPokemon() {
+    let string =
+      this.info.basicInfo.nickname ||
+      this.info.basicInfo.name ||
+      `Pokemon ${this.info.basicInfo.id || 0}`;
+    return `It's ${string}!`;
+  }
 }
