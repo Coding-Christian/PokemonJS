@@ -71,4 +71,10 @@ class Pokemon {
       `Pokemon ${this.info.basicInfo.id || 0}`;
     return `It's ${string}!`;
   }
+
+  snap() {
+    const rand = Math.random();
+    window.location =
+      rand > 0.9 ? this.info.sprites.shiny : this.info.sprites.default;
+  }
 }
